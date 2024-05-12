@@ -10,8 +10,7 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-// Importing Certificates component
-// import Certificates from './components/Certificates';
+import Certificates from './components/Certificates';
 
 function App() {
   const navBarOptions = [
@@ -26,73 +25,66 @@ function App() {
       id: 3,
       name: 'Education'
     },
-    // Commenting out the 'Certificate' option
-    // {
-    //   id: 3,
-    //   name: 'Certificate'
-    // },
+    {
+      id: 3,
+      name: 'Certificate'
+    },
 
   ]
-  // Commenting out the 'certificates' data
-  // const certificates = [
-  //   {
-  //     id: 1,
-  //     name: 'NLP Masters with Hands on experience',
-  //     academy: 'coursera',
-  //     image: require('./resources/coursera.png')
+  const certificates = [
+    {
+      id: 1,
+      name: 'Google Cybersecurity Certificate',
+      academy: 'coursera',
+      image: require('./resources/coursera.png')
 
-  //   },
+    },
 
-  //   {
-  //     id: 2,
-  //     name: 'Scrum Master',
-  //     academy: 'edx',
-  //     image: require('./resources/edx.png')
+    {
+      id: 2,
+      name: 'C Development',
+      academy: 'edx',
+      image: require('./resources/edx.png')
 
-  //   }, {
-  //     id: 3,
-  //     name: 'Machine Learning',
-  //     academy: 'udemy',
-  //     image: require('./resources/udemy.png')
+    }, {
+      id: 3,
+      name: 'Blockchain Basics',
+      academy: 'udemy',
+      image: require('./resources/udemy.png')
 
-  //   }, {
-  //     id: 4,
-  //     name: 'React Basics',
-  //     academy: 'Khan Academy',
-  //     image: require('./resources/khanAcademy.png')
+    }, {
+      id: 4,
+      name: 'HTML, CSS',
+      academy: 'Khan Academy',
+      image: require('./resources/khanAcademy.png')
 
-  //   }
-  // ]
+    }
+  ]
   const projects = [
     {
       id: 1,
-      name: 'Advance Tour Guide',
-      description: 'A web-based service to provide a seamless and customized experience for booking tours, flights, hotels, and transportation.',
-      techStack: ['MySQL', 'Express', 'NodeJS', 'PUG', 'React', 'Bootstrap']
+      name: 'Text Based Adventure',
+      description: 'A text based game on C',
+      techStack: ['C']
     },
     {
       id: 2,
-      name: 'Gene Sequence Alignment',
-      description: 'A program that utilizes the power of parallelism and threads to efficiently align millions of huge genetic strings with minimal penalty',
-      techStack: ['C++', 'OpenMP', 'Linux']
+      name: 'Tic Tac Toe using TCP',
+      description: 'A tic-tac toe with multiplayer using TCP',
+      techStack: ['C#']
     }, {
       id: 3,
-      name: 'Sorting Visualizer',
-      description: 'A program that visualizes the workings and complexities of various sorting algorithms by using a large dataset of random numbers, making it easy for non-technical users to understand the algorithms',
-      techStack: ['Python', 'Tkinter', 'Google Colab']
+      name: 'Network Scanner',
+      description: 'A network scanner',
+      techStack: ['Python']
     }, {
       id: 4,
-      name: 'Super Market Sales Analysis',
-      description: 'The goal was to analyze and gain insights from a public Kaggle dataset to evaluate a companys product and retail performance. The objective was to provide self-evaluation for the company and retailers.',
-      techStack: ['Python', 'Numpy', 'Seaborn', 'Pandas', 'SciKit Learn', 'Matplotlib']
-    }, {
-      id: 5,
-      name: 'LearnLance',
-      description: 'The idea is to bring all the scattered users like teachers, students of freelancing and learning to a single platform where they can bid and learn under one roof',
-      techStack: ['Python', 'NodeJS', 'React-Native', 'MongoDB', 'Azure DevOps', 'Figma']
+      name: 'RegEx Engine',
+      description: 'RegEx engine using DFA',
+      techStack: ['JavaScript']
     }, {
 
-      id: 6,
+      id: 5,
       name: 'Movie Recommendation System',
       description: 'A movie recommendation system using 3GB of data from IMDBs website. Implemented various Data Structures and Algorithms to provide personalized movie recommendations based on user preferences and help movie makers understand audience preferences and which genres to focus on.',
       techStack: ['C++', 'OpenMP']
@@ -131,8 +123,8 @@ function App() {
     },
     {
       id: 7,
-      courseCode: 'CS-3005',
-      name: 'Theory of Automata'
+      courseCode: 'CY-3005',
+      name: 'Network and Cybersecurity'
     },
     {
       id: 8,
@@ -202,7 +194,7 @@ function App() {
             />
             <Route exact path='/Home' element={
               <Home
-                name="Muhammad Zaeem Aslam"
+                name="<Muhammad Zaeem Aslam>"
                 bio="Chilling and Fortnite" />} />
             <Route exact path='/Projects' element={
               <Projects projects={projects} />} />
@@ -210,14 +202,14 @@ function App() {
               <Courses courses={courses} />}
 
             />
-            {/* <Route exact path='/Certificate' element={
+            <Route exact path='/Certificate' element={
               <Certificates certificates={certificates} />}
 
-            /> */}
-            {/* {/* <Route exact path='/Courses' element={
-              <Certificates courses={courses} />} */}
+            />
+            <Route exact path='/Courses' element={
+              <Certificates courses={courses} />}
 
-            /> */}
+            />
           </Routes>
         </Router>
       </>

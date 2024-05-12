@@ -1,5 +1,5 @@
 import React from 'react'
-import DisplayPicture from '../resources/zaeem.jpg'
+import DisplayPicture from '../resources/zaeem.jpeg'
 
 export default function Home(props) {
     const { name, bio } = props
